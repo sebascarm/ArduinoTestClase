@@ -9,8 +9,16 @@
 	#include "WProgram.h"
 #endif
 
+/***********************************************************************************/
+/****       DECLARACION DE CLASES (TIMER)                                       ****/
+/***********************************************************************************/
+// Timer Tiempo = 5000; //(hasta 33.000)                                        ****/
+// void setup() {                                                               ****/
+//    Tiempo.Accion = &Funcion;                                                 ****/
+// void loop()                                                                  ****/
+//    Tiempo.Check();                                                           ****/
+//**********************************************************************************/
 void SinAccion();
-
 class C_Timer
 {
  private:
@@ -24,7 +32,7 @@ class C_Timer
 	int Total = 10000;				// TIEMPO INICIAL
 	C_Timer();						// SIN PARAMETRO TIEMPO INICIAL = TOTAL
 	C_Timer(int Tiempo);            // PARAMETRO TIEMPO INICIAL
-	void operator = (int Tiempo);	// PARAMETRO TIEMPO INICIAL
+	void operator = (int Tiempo);	// PARAMETRO TIEMPO INICIAL (Se puede declarar con "=")
 	void(*Accion)() = &SinAccion;	// FUNCION A EJECUTAR EJ = Timer.Accion = &Funcion;
 	// ACCIONES
 	void Reiniciar();				//RE ARRANCA Y REINICIA CONTADOR
@@ -32,7 +40,6 @@ class C_Timer
 	void Check();					//REVISA EL TIEMPO ACTUAL Y EJECUTA, LUEGO REINICIA EL TIEMPO
 	void Stop();					//DETIENE EL CONTADOR, REINICIAR PARA INICIAR NUEVAMENTE
 };
-
 
 #endif
 

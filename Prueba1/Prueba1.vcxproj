@@ -82,11 +82,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="C_Control.h" />
     <ClInclude Include="C_Timer.h" />
     <ClInclude Include="C_Transcurrido.h" />
     <ClInclude Include="__vm\.Prueba1.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C_Control.cpp" />
     <ClCompile Include="C_Timer.cpp" />
     <ClCompile Include="C_Transcurrido.cpp" />
   </ItemGroup>

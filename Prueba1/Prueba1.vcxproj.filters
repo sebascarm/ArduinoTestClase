@@ -27,12 +27,18 @@
     <ClInclude Include="C_Transcurrido.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="C_Control.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C_Timer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C_Transcurrido.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Control.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

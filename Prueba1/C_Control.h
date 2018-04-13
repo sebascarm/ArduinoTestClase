@@ -17,14 +17,15 @@ class C_Control {
 		byte V_Chip;
 		byte V_Posicion;
 		String V_Comando;
+		C_Comunicacion Comunicacion;
 	public:
-		//Parametros
+		//Parametros-
 		C_Control(TipoControl Tipo);
 		void Valor(int Valor);
 		//void ValorAnt();
 		void AsignarChip(byte Chip, byte Posicion);
 		void ComandoSerie(String Comando);
-		// Acciones
+		// Acciones-
 		// Acciones de output - (Carga datos del chip y lo envia via serie)
 		void EnviarComando();
 		// Acciones de input - (Busca y carga el comando)

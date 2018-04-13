@@ -29,10 +29,18 @@ void C_Control::EnviarComando() {
 		if (V_Valor != V_ValorAnt) {
 			Comunicacion.Enviar(V_Comando, V_Valor);
 			V_ValorAnt = V_Valor;
+		}
 		break;
 	// Enviar PULSADOR - Solo cuando los valores son distintos y es 1
 	case Pulsador:
+		if (V_Valor != V_Valor) {
+			V_ValorAnt = V_Valor;
+			if (V_Valor == 1) {
+				Comunicacion.Enviar(V_Comando, V_Valor);
+			}
+		}
 		break;
+
 	default:
 		break;
 	}

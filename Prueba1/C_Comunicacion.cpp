@@ -4,11 +4,11 @@
 
 #include "C_Comunicacion.h"
 
-
+//Parametros
 void C_Comunicacion::SecuenciaEnvio(int Secuencia) {
 	V_SecuenciaEnvio = Secuencia;
 }
-
+//Acciones
 void C_Comunicacion::Enviar(String Comando, int Valor = -1) {
 	Serial.print(ID_Envio()); /* 1 Servidor /* 2 Placa --- */
 	Serial.print(Comando);
@@ -29,8 +29,8 @@ void C_Comunicacion::EnviarComentario(String Comando, int Valor = -1) {
 }
 
 
-
-String C_Comunicacion::ID_Envio() { /* Destino: 1 Servidor , 2 Placa /* no se usa mas el destino */
+// Funciones internas
+String C_Comunicacion::ID_Envio() { 
 	String ID_String;
 	V_SecuenciaEnvio = V_SecuenciaEnvio + 1;
 	if (V_SecuenciaEnvio == 100) {
@@ -42,6 +42,6 @@ String C_Comunicacion::ID_Envio() { /* Destino: 1 Servidor , 2 Placa /* no se us
 	else {
 		ID_String = String(V_SecuenciaEnvio);
 	}
-	return "[F" + ID_String + "]";
+	return "[" + Origen + ID_String + "]";
 }
 

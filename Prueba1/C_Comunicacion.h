@@ -13,6 +13,7 @@ class C_Comunicacion{
 	private:
 		int V_SecuenciaEnvio = 0;
 		String ID_Envio();
+		String Origen = "A"; // A: Arduino - F: Feudrino
 	public:
 		//Parametros-s
 		void SecuenciaEnvio(int Secuencia);

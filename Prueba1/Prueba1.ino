@@ -5,6 +5,7 @@
 */
 
 // the setup function runs once when you press reset or power the board
+#include "C_Comunicacion.h"
 #include "C_Control.h"
 #include "C_Transcurrido.h"
 #include "C_Timer.h"

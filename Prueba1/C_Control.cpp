@@ -3,6 +3,7 @@
 // 
 
 #include "C_Control.h"
+#include "C_Comunicacion.h"
 
 C_Control::C_Control(TipoControl Tipo) {
 	V_Tipo = Tipo;
@@ -20,12 +21,22 @@ void C_Control::ComandoSerie(String Comando) {
 }
 // Acciones
 void C_Control::EnviarComando() {
-	// Cargar variable
+	// Cargar Valor desde el chip-
 	V_Valor = bitRead(V_Chip, V_Posicion);
-	// Enviar solo para switch si es distinto
-	if (V_Valor != V_ValorAnt) {
-		// Enviar(V_Comando, V_Valor);
-		V_ValorAnt = V_Valor;
+	switch (V_Tipo) {
+	// Enviar SWITCH - Solo cuando los valores son distintos
+	case Switch:
+		if (V_Valor != V_ValorAnt) {
+			Comunicacion.Enviar(V_Comando, V_Valor);
+			V_ValorAnt = V_Valor;
+		break;
+	// Enviar PULSADOR - Solo cuando los valores son distintos y es 1
+	case Pulsador:
+		break;
+	default:
+		break;
 	}
+	
+	
 
 }

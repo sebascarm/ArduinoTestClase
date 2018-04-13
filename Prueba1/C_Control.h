@@ -22,7 +22,7 @@ class C_Control {
 		//Parametros-
 		C_Control(TipoControl Tipo);
 		void Valor(int Valor);
-		//void ValorAnt();
+		//void ValorAnt();?????s
 		void AsignarChip(byte Chip, byte Posicion);
 		void ComandoSerie(String Comando);
 		// Acciones-

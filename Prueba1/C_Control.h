@@ -8,7 +8,10 @@
 #else
 	#include "WProgram.h"
 #endif
-enum TipoControl {Switch, Pulsador, PoteAnalogo, PoteDigital, Input};
+
+enum TipoControl {Switch, Pulsador, Llave, PoteAnalogo, PoteDigital, Input};
+//Clase Control
+
 class C_Control {
 	private:
 		TipoControl V_Tipo;
@@ -19,11 +22,17 @@ class C_Control {
 		String V_Comando;
 		C_Comunicacion Comunicacion;
 	public:
-		//Parametros-
-		C_Control(TipoControl Tipo);
+		/// <summary>Constructor de la clase</summary> 
+		/// <param name = "Tipo">Tipo de Control (Switch, Pulsador, Llave, PoteAnalogo, PoteDigital, Input)</param>
+		C_Control(TipoControl Tipo); 
+		/// <summary>No utilizado por el momento</summary> 
 		void Valor(int Valor);
-		//void ValorAnt();?????s
+		/// <summary>Asignacion de Integrado</summary> 
+		/// <param name = "Chip">Chip individual asignado</param>
+		/// <param name = "Posicion">Posicion del Chip a leer</param>
 		void AsignarChip(byte Chip, byte Posicion);
+		/// <summary>Asignacion de Comando via Serie</summary> 
+		/// <param name = "Comando">Comando de envio via Serie</param>
 		void ComandoSerie(String Comando);
 		// Acciones-
 		// Acciones de output - (Carga datos del chip y lo envia via serie)

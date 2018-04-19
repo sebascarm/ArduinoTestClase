@@ -1,57 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
+    <Filter Include="Header">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
+    <Filter Include="Recursos">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Prueba1.ino" />
+    <Filter Include="Recursos\Clases">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Recursos\Clases\SubClases">
+      <UniqueIdentifier>{f1438cc6-743b-49c7-94fe-a1985195d2d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.Prueba1.vsarduino.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="C_Timer.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="C_Transcurrido.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="C_Control.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="C_Comunicacion.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
     </ClInclude>
     <ClInclude Include="C_Pote.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="C_GrupoChip.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
+      <Filter>Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C_Timer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C_Transcurrido.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="C_Control.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C_Comunicacion.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Recursos\Clases\SubClases</Filter>
     </ClCompile>
     <ClCompile Include="C_Pote.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Recursos\Clases\SubClases</Filter>
     </ClCompile>
+    <ClCompile Include="C_Timer.cpp">
+      <Filter>Recursos\Clases\SubClases</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Transcurrido.cpp">
+      <Filter>Recursos\Clases\SubClases</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Control.cpp">
+      <Filter>Recursos\Clases</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Recursos</Filter>
+    </ClCompile>
+    <ClCompile Include="C_GrupoChip.cpp">
+      <Filter>Recursos\Clases</Filter>
+    </ClCompile>
+    <ClCompile Include="Variables_MCP.h" />
+    <ClCompile Include="Variables_MCP.cpp">
+      <Filter>Recursos\Clases</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="main.ino" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Prueba1.rc">
+      <Filter>Recursos</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

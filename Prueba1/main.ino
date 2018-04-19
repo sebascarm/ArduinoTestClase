@@ -5,18 +5,22 @@
 */
 
 // the setup function runs once when you press reset or power the board
-#include "C_Pote.h"
-#include "C_Comunicacion.h"
-#include "C_Control.h"
-#include "C_Transcurrido.h"
-#include "C_Timer.h"
+
+#include "Global.h"
+#include "Variables_MCP.h"
+
+
 void setup() {
-	
+	Variables_MCP();
+
 	
 
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() {
-  
+	
+	
+
+	
 }

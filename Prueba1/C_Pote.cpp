@@ -4,12 +4,12 @@
 
 #include "C_Pote.h"
 
-void C_Pote::init()
-{
-
+int C_Pote::Valor(){
 
 }
 
+
+// Funciones internas
 
 
 

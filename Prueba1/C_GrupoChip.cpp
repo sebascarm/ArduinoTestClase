@@ -44,4 +44,4 @@ void C_GrupoChip::EscribirChips() {
 	if (Cant_Chips > 0) { shiftOut(PinData, PinClock, MSBFIRST, Chip1); }
 	digitalWrite(PinLatch, HIGH);
 }
-//
+// 

@@ -4,13 +4,9 @@
 
 #include "C_Control.h"
 #include "C_Comunicacion.h"
-
+//Clase Control
 C_Control::C_Control(TipoControl Tipo) {
 	V_Tipo = Tipo;
-}
-void C_Control::Valor(int Valor) {
-	V_ValorAnt = V_Valor;
-	V_Valor = Valor;
 }
 void C_Control::AsignarChip(byte Chip, byte Posicion) {
 	V_Chip = Chip;
@@ -21,7 +17,7 @@ void C_Control::ComandoSerie(String Comando) {
 }
 // Acciones
 void C_Control::EnviarComando() {
-	// Cargar Valor desde el chip-
+	// Cargar Valor desde el chip
 	V_Valor = bitRead(V_Chip, V_Posicion);
 	switch (V_Tipo) {
 	// Enviar SWITCH - Solo cuando los valores son distintos

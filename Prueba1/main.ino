@@ -4,15 +4,16 @@
  Author:	Sebastian Carmona
 */
 
-// the setup function runs once when you press reset or power the board
-
-#include "Global.h"
-#include "Variables_MCP.h"
+#include "Variables_MCP_LED.h"
+#include "Variables_MCP_OUT.h"
+#include "Inicializacion_MCP_OUT.h"
 
 
 void setup() {
-	Variables_MCP();
-
+	Inicializacion_MCP_OUT();
+	
+	Serial.begin(19200);
+	Serial.print("[A00]>MENC_RESET=1<");
 	
 
 }

@@ -88,7 +88,10 @@
     <ClInclude Include="C_Pote.h" />
     <ClInclude Include="C_Timer.h" />
     <ClInclude Include="C_Transcurrido.h" />
-    <ClInclude Include="Global.h" />
+    <ClInclude Include="Inicializacion_MCP_LED.h" />
+    <ClInclude Include="Pines.h" />
+    <ClInclude Include="Variables_MCP_LED.h" />
+    <ClInclude Include="Variables_MCP_OUT.h" />
     <ClInclude Include="__vm\.Prueba1.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
@@ -99,8 +102,7 @@
     <ClCompile Include="C_Timer.cpp" />
     <ClCompile Include="C_Transcurrido.cpp" />
     <ClCompile Include="Global.cpp" />
-    <ClCompile Include="Variables_MCP.cpp" />
-    <ClCompile Include="Variables_MCP.h" />
+    <ClCompile Include="Inicializacion_MCP_OUT.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Prueba1.rc" />
